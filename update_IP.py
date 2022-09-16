@@ -23,10 +23,3 @@ os.system('git add "IP.txt"')
 os.system('git commit -m "IP.txt"')
 os.system('git push')
 
-
-
-
-html = requests.get("https://github.com/mathkiler/robot_change_IP/blob/main/IP.txt")
-tex = html.text
-print(tex[tex.find('<td id="LC1" class="blob-code blob-code-inner js-file-line">')+60:get_next_line(tex, tex.find('<td id="LC1" class="blob-code blob-code-inner js-file-line">'))-5])
-
